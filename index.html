@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pizza Pazza | Pizzeria da asporto e domicilio a Lurago d'Erba</title>
+<meta name="description" content="Pizza Pazza, pizzeria a Lurago d'Erba (CO): pizze classiche e famiglia, calzoni, focacce, panini e kebab. Asporto e consegna a domicilio, si ordina per telefono.">
+<meta name="theme-color" content="#3a0f0c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23e8a23d'/%3E%3Cpath d='M32 8c13 0 24 11 24 24H8C8 19 19 8 32 8Z' fill='%23c1402a'/%3E%3Ccircle cx='22' cy='24' r='2.6' fill='%23f7ecd6'/%3E%3Ccircle cx='34' cy='20' r='2.6' fill='%23f7ecd6'/%3E%3Ccircle cx='42' cy='27' r='2.6' fill='%23f7ecd6'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:site_name" content="Pizza Pazza">
+<meta property="og:title" content="Pizza Pazza | Pizzeria a Lurago d'Erba">
+<meta property="og:description" content="Pizze classiche e famiglia, calzoni, focacce, panini e kebab. Asporto e consegna a domicilio a Lurago d'Erba (CO). Si ordina per telefono.">
+<meta property="og:locale" content="it_IT">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          crema:  { DEFAULT: '#f7ecd6', hi: '#fbf6e9', lo: '#efdcb1' },
+          vino:   { DEFAULT: '#3a0f0c', hi: '#54180f', lo: '#2a0a08' },
+          mattone:{ DEFAULT: '#7a2c1f', hi: '#94382a', lo: '#5c2018' },
+          inchiostro: '#2b1710',
+          senape: { DEFAULT: '#e8a23d', hi: '#f2b65e', lo: '#c9822a' },
+          pomodoro: '#c1402a'
+        },
+        fontFamily: {
+          display: ['"Fredoka"', 'ui-rounded', 'system-ui', 'sans-serif'],
+          sans: ['"Work Sans"', 'ui-sans-serif', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+
+<style>
+  /* ================= Fondamenta ================= */
+  :root {
+    --vino: #3a0f0c; --vino-hi: #54180f; --vino-lo: #2a0a08;
+    --mattone: #7a2c1f; --mattone-hi: #94382a; --mattone-lo: #5c2018;
+    --crema: #f7ecd6; --crema-hi: #fbf6e9; --crema-lo: #efdcb1;
+    --ink: #2b1710; --senape: #e8a23d; --senape-hi: #f2b65e; --senape-lo: #c9822a;
+    --pomodoro: #c1402a;
+    --line: rgba(43,23,16,.12); --line-on-vino: rgba(247,236,214,.16);
+    --hdr: 64px;
+    --ease: cubic-bezier(.22,1,.36,1);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--hdr) + var(--nav-h, 0px) + env(safe-area-inset-top, 0px)); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html { min-height: 100%; }
+  body { min-height: 100vh; }
+  body { margin:0; background: var(--vino); color: var(--crema); font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+         -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: var(--senape); color: var(--ink); }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  .wrap { max-width: 78rem; margin-inline: auto; padding-inline: 1.25rem; }
+  @media (min-width: 640px) { .wrap { padding-inline: 2rem; } }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .skip-link { position: absolute; left: 1rem; top: -3rem; background: var(--senape); color: var(--ink); font-weight: 700; padding: .6rem 1rem; border-radius: .6rem; z-index: 100; transition: top .2s var(--ease); }
+  .skip-link:focus { top: 1rem; }
+  :focus-visible { outline: 3px solid var(--senape); outline-offset: 2px; border-radius: .25rem; }
+  .md-hide { display: none; } @media (min-width: 768px) { .md-hide{ display:initial; } .md-only{ display:none!important; } }
+  .lg-nav { display: none; } .lg-hide { display: initial; }
+  @media (min-width: 1024px) { .lg-nav { display: block; } .lg-hide { display: none !important; } }
+  .nb { white-space: nowrap; }
+
+  /* ================= Tipografia ================= */
+  h1,h2,h3,h4 { font-family: 'Fredoka', ui-rounded, sans-serif; font-weight: 600; letter-spacing: -.01em; margin: 0; }
+  .h-sec { font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.03; color: var(--crema-hi); }
+  .h-sub { font-size: clamp(1.25rem, 3vw, 1.6rem); color: var(--crema-hi); }
+  .lead { font-size: clamp(1.02rem, 2vw, 1.2rem); color: rgba(247,236,214,.78); max-width: 42rem; line-height: 1.55; }
+  .on-crema .lead { color: rgba(43,23,16,.75); }
+  .label { font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--senape-hi); }
+
+  /* ================= Bottoni & badge ================= */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: 999px; font-weight: 700; white-space: nowrap;
+         padding: .8rem 1.35rem; font-size: .98rem; transition: transform .18s var(--ease), filter .18s var(--ease), background-color .18s var(--ease); min-height: 44px; }
+  .btn:active { transform: scale(.97); }
+  .btn-primary { background: var(--senape); color: var(--ink); }
+  .btn-primary:hover { filter: brightness(1.07); }
+  .btn-ghost { background: rgba(247,236,214,.08); color: var(--crema-hi); border: 1.5px solid rgba(247,236,214,.28); }
+  .btn-ghost:hover { background: rgba(247,236,214,.15); }
+  .on-crema .btn-ghost { background: rgba(43,23,16,.05); color: var(--ink); border-color: rgba(43,23,16,.25); }
+  .on-crema .btn-ghost:hover { background: rgba(43,23,16,.1); }
+  .btn-lg { padding: 1rem 1.7rem; font-size: 1.05rem; }
+  .ic { width: 1.15em; height: 1.15em; stroke: currentColor; fill: none; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  .badge { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .85rem; border-radius: 999px; font-weight: 700; font-size: .82rem;
+           background: rgba(247,236,214,.1); border: 1px solid rgba(247,236,214,.22); color: var(--crema-hi); }
+  .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem 1rem; border-radius: 999px; background: rgba(247,236,214,.08);
+          border: 1px solid rgba(247,236,214,.18); font-weight: 600; font-size: .9rem; color: var(--crema-hi); }
+
+  /* ================= Sfondi decorativi ================= */
+  .grain { background-image: radial-gradient(rgba(247,236,214,.05) 1px, transparent 1px); background-size: 3px 3px; }
+  .swirl-bg { position: relative; isolation: isolate; }
+  .swirl-bg::before { content:''; position:absolute; inset:0; z-index:-1; opacity:.5;
+    background-image: radial-gradient(60rem 40rem at 15% -10%, rgba(232,162,61,.14), transparent 60%),
+                       radial-gradient(50rem 34rem at 110% 30%, rgba(193,64,42,.14), transparent 60%); }
+  .media { position: relative; overflow: hidden; background: linear-gradient(155deg, var(--mattone-lo), var(--vino-lo)); }
+  .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s var(--ease); }
+  .media img.is-loaded { opacity: 1; }
+  .media::after { content:''; position:absolute; inset:0; background-image: radial-gradient(rgba(247,236,214,.08) 1px, transparent 1px); background-size: 4px 4px; opacity:.5; }
+  .media.is-broken::after { opacity: .9; }
+
+  /* ================= Header ================= */
+  .site-header { position: sticky; top: 0; z-index: 60; transition: transform .35s var(--ease), background-color .3s, box-shadow .3s;
+                 padding-top: env(safe-area-inset-top, 0px); }
+  .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header.is-solid, .site-header.menu-open { background: var(--vino-lo); box-shadow: 0 1px 0 var(--line-on-vino); }
+  .hdr-row { height: var(--hdr); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .logo { display: inline-flex; align-items: center; gap: .55rem; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--crema-hi); }
+  .logo-mark { width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--senape); display: grid; place-items: center; color: var(--vino); flex: none; }
+  .logo-mark .ic { width: 1.25rem; height: 1.25rem; }
+  .nav-link { display: inline-flex; align-items: center; padding: 0 .75rem; height: 2.4rem; border-radius: 999px; font-weight: 600; font-size: .95rem; color: rgba(247,236,214,.82); transition: background-color .15s, color .15s; }
+  .nav-link:hover { background: rgba(247,236,214,.09); color: var(--crema-hi); }
+  .burger { width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; background: rgba(247,236,214,.08); }
+  .burger-bars { width: 20px; height: 14px; position: relative; }
+  .burger-bars span { position: absolute; left: 0; width: 100%; height: 2px; background: var(--crema-hi); border-radius: 2px; transition: transform .3s var(--ease), opacity .2s; }
+  .burger-bars span:nth-child(1){ top:0; } .burger-bars span:nth-child(2){ top:6px; } .burger-bars span:nth-child(3){ top:12px; }
+  .burger[aria-expanded="true"] .burger-bars span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+  .burger[aria-expanded="true"] .burger-bars span:nth-child(2){ opacity:0; }
+  .burger[aria-expanded="true"] .burger-bars span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+
+  .mnav-backdrop { position: fixed; inset: 0; background: rgba(20,7,5,.6); backdrop-filter: blur(2px); opacity: 0; visibility: hidden; transition: opacity .3s var(--ease); z-index: 55; }
+  .mnav-backdrop.is-open { opacity: 1; visibility: visible; }
+  .mnav { position: fixed; top: 0; right: 0; height: 100%; width: min(20rem, 86vw); background: var(--vino-lo); z-index: 56; padding: calc(var(--hdr) + env(safe-area-inset-top,0px)) 1.5rem 2rem;
+          transform: translateX(100%); transition: transform .35s var(--ease); box-shadow: -8px 0 30px rgba(0,0,0,.35); overflow-y: auto; }
+  .mnav.is-open { transform: translateX(0); }
+  .mnav a { display: flex; align-items: center; min-height: 52px; font-size: 1.1rem; font-weight: 600; border-bottom: 1px solid var(--line-on-vino); }
+  @media (prefers-reduced-motion: reduce) { .cat-nav-wrap { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .site-header, .mnav, .mnav-backdrop, .burger-bars span { transition: none !important; } }
+
+  /* ================= Hero ================= */
+  .hero { position: relative; isolation: isolate; min-height: min(94vh, 780px); display: flex; align-items: flex-end; }
+  .hero-media { position: absolute; inset: 0; z-index: -2; }
+  .hero-media img { transform: scale(1.08); }
+  .hero-veil { position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(180deg, rgba(42,10,8,.55) 0%, rgba(42,10,8,.72) 55%, var(--vino) 100%),
+                linear-gradient(90deg, rgba(42,10,8,.55), rgba(42,10,8,.15) 55%); }
+  .hero-title { font-size: clamp(3rem, 13vw, 6.2rem); line-height: .92; color: var(--crema-hi); text-shadow: 0 6px 30px rgba(0,0,0,.35); }
+  .hero-tag { font-size: clamp(1.5rem, 6vw, 2.1rem); max-width: 21ch; text-wrap: balance; color: var(--senape-hi); font-family: 'Fredoka', sans-serif; font-weight: 500; }
+
+  /* ================= Info strip ================= */
+  .info-strip { border-top: 1px solid var(--line-on-vino); border-bottom: 1px solid var(--line-on-vino); background: rgba(0,0,0,.14); }
+  .info-item { display: flex; align-items: center; gap: .8rem; padding: 1.1rem 0; }
+  .info-ic { width: 2.6rem; height: 2.6rem; border-radius: 999px; background: rgba(232,162,61,.15); color: var(--senape-hi); display: grid; place-items: center; flex: none; }
+
+  /* ================= Sezione crema (menu) ================= */
+  .on-crema { background: var(--crema); color: var(--ink); }
+  .on-crema h1, .on-crema h2, .on-crema h3, .on-crema h4 { color: var(--ink); }
+  .on-crema .label { color: var(--mattone); }
+
+  .search-wrap { position: relative; }
+  .search { width: 100%; display: flex; align-items: center; gap: .7rem; background: var(--crema-hi); border: 1.5px solid rgba(43,23,16,.18);
+            border-radius: 1rem; padding: .85rem 1rem; }
+  .search input { flex: 1; background: none; border: 0; outline: 0; font-size: 1.02rem; color: var(--ink); min-width: 0; }
+  .search input::-webkit-search-cancel-button, .search input::-webkit-search-decoration { -webkit-appearance: none; appearance: none; display: none; }
+  .search input::placeholder { color: rgba(43,23,16,.45); }
+  .search .ic { color: rgba(43,23,16,.5); }
+  .search-clear { width: 44px; height: 44px; margin: -.5rem -.5rem -.5rem 0; display: grid; place-items: center; flex: none; }
+  .search-clear span { width: 28px; height: 28px; border-radius: 999px; display: grid; place-items: center; background: rgba(43,23,16,.1); }
+
+  .cat-nav-wrap { position: sticky; top: var(--sticky-top, calc(var(--hdr) + env(safe-area-inset-top, 0px))); transition: top .35s var(--ease); z-index: 40; background: var(--crema); border-bottom: 1px solid rgba(43,23,16,.14); }
+  .cat-nav { display: flex; gap: .55rem; overflow-x: auto; padding: .8rem 1.25rem; scrollbar-width: none; }
+  .cat-nav::-webkit-scrollbar { display: none; }
+  .cat-pill { flex: none; scroll-snap-align: start; display: inline-flex; align-items: center; gap: .4rem; padding: .55rem 1rem; min-height: 44px;
+              border-radius: 999px; background: var(--crema-hi); border: 1.5px solid rgba(43,23,16,.16); font-weight: 700; font-size: .92rem; color: var(--ink); white-space: nowrap; }
+  .cat-pill small { font-weight: 600; opacity: .55; }
+  .cat-pill.is-active { background: var(--mattone); border-color: var(--mattone); color: var(--crema-hi); }
+  .cat-pill.is-active small { opacity: .8; }
+  .cats-btn { flex: none; display: inline-flex; align-items: center; gap: .35rem; padding: .55rem .9rem; min-height: 44px; border-radius: 999px;
+              background: var(--vino); color: var(--crema-hi); font-weight: 700; font-size: .92rem; }
+
+  /* ================= Accordion categorie menu ================= */
+  .menu-cat { border: 1.5px solid rgba(43,23,16,.14); border-radius: 1.1rem; background: var(--crema-hi); overflow: hidden; }
+  .cat-btn { width: 100%; display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem; text-align: left; min-height: 44px; }
+  .cat-num { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 1.6rem; color: var(--mattone); background: rgba(122,44,31,.1); width: 2.6rem; height: 2.6rem; border-radius: .8rem; display: grid; place-items: center; flex: none; }
+  .cat-btn-title { flex: 1; min-width: 0; }
+  .cat-btn-title h3 { font-size: 1.25rem; }
+  .cat-meta { font-size: .86rem; color: rgba(43,23,16,.6); margin-top: .1rem; }
+  .cat-chev { width: 2.1rem; height: 2.1rem; border-radius: 999px; background: rgba(43,23,16,.06); display: grid; place-items: center; flex: none; transition: transform .3s var(--ease); }
+  .cat-btn[aria-expanded="true"] .cat-chev { transform: rotate(180deg); background: var(--senape); color: var(--ink); }
+  .cat-panel { border-top: 1px solid rgba(43,23,16,.12); padding: .3rem 1.25rem 1.1rem; }
+  .cat-panel[hidden] { display: none; }
+  .cat-panel.cols-2 { columns: 1; column-gap: 2.4rem; } @media (min-width: 900px) { .cat-panel.cols-2 { columns: 2; } }
+
+  .menu-list { list-style: none; margin: 0; padding: 0; }
+  .pz-item, .simple-item { break-inside: avoid; padding: .85rem 0; border-bottom: 1px dashed rgba(43,23,16,.16); }
+  .menu-list > li:last-child { border-bottom: 0; }
+  .mi-name { font-weight: 700; font-size: 1.02rem; color: var(--ink); }
+  .mi-desc { display: block; font-size: .88rem; color: rgba(43,23,16,.62); margin-top: .15rem; line-height: 1.35; }
+  .simple-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .simple-price { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--mattone); white-space: nowrap; flex: none; }
+  .pz-prices { display: flex; gap: 1.1rem; margin-top: .5rem; }
+  .pz-p { display: flex; flex-direction: column; }
+  .pz-p b { font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: rgba(43,23,16,.5); font-weight: 700; }
+  .pz-p data { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--mattone); font-size: 1.05rem; }
+  mark { background: rgba(232,162,61,.55); color: inherit; border-radius: .2rem; padding: 0 .05em; }
+  .empty-msg { padding: 2.5rem 1rem; text-align: center; color: rgba(43,23,16,.55); }
+  .empty-msg[hidden] { display: none; }
+
+  /* Pannello personalizza / supplementi */
+  .supp-panel { background: var(--vino); color: var(--crema-hi); border-radius: 1.1rem; padding: 1.4rem 1.4rem 1.5rem; }
+  .supp-panel dl { display: grid; grid-template-columns: 1fr auto; gap: .5rem 1rem; margin: .7rem 0 0; }
+  .supp-panel dt { color: rgba(247,236,214,.85); }
+  .supp-panel dd { margin: 0; font-weight: 800; color: var(--senape-hi); font-variant-numeric: tabular-nums; }
+
+  /* ================= Categorie sheet (mobile) ================= */
+  .cats-sheet-backdrop { position: fixed; inset: 0; background: rgba(20,7,5,.55); opacity: 0; visibility: hidden; transition: opacity .25s var(--ease); z-index: 65; }
+  .cats-sheet-backdrop.is-open { opacity: 1; visibility: visible; }
+  .cats-sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 66; background: var(--crema); color: var(--ink); border-radius: 1.4rem 1.4rem 0 0;
+                padding: 1.1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom,0px)); transform: translateY(100%); transition: transform .35s var(--ease); max-height: 78vh; overflow-y: auto; }
+  .cats-sheet.is-open { transform: translateY(0); }
+  .cats-sheet .bar { width: 2.6rem; height: 4px; border-radius: 2px; background: rgba(43,23,16,.2); margin: 0 auto .9rem; }
+  .cats-sheet button.row { width: 100%; display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: .3rem 0; border-bottom: 1px solid rgba(43,23,16,.1); font-weight: 700; font-size: 1.05rem; text-align: left; gap: 1rem; }
+  .cats-sheet button.row span { font-weight: 600; font-size: .85rem; opacity: .55; white-space: nowrap; }
+  .cats-sheet button.row:last-of-type { border-bottom: 0; }
+  @media (prefers-reduced-motion: reduce) { .cats-sheet, .cats-sheet-backdrop, .cat-chev { transition: none !important; } }
+
+  /* ================= Evidenza ================= */
+  .pick { background: var(--vino-lo); border: 1px solid var(--line-on-vino); border-radius: 1rem; padding: 1.2rem 1.3rem; }
+  .pick h3 { font-size: 1.15rem; color: var(--senape-hi); }
+  .pick p { margin: .4rem 0 0; color: rgba(247,236,214,.72); font-size: .92rem; }
+  .pick data { display: block; margin-top: .7rem; font-weight: 800; font-size: 1.15rem; color: var(--crema-hi); }
+  .sig { display: grid; gap: 0; border-radius: 1.3rem; overflow: hidden; border: 1px solid var(--line-on-vino); background: var(--vino-lo); }
+  @media (min-width: 860px) { .sig { grid-template-columns: 1fr 1fr; } }
+  .sig-body { padding: 2rem clamp(1.25rem, 4vw, 2.6rem); display: flex; flex-direction: column; gap: .9rem; align-self: center; }
+  .sig-name { font-size: clamp(2.2rem, 6vw, 3.1rem); color: var(--crema-hi); line-height: 1; }
+
+  /* ================= Fiducia clienti ================= */
+  .fb { padding: 1.3rem 0; border-top: 1px solid var(--line-on-vino); }
+  .fb h3 { font-size: 1.02rem; color: var(--senape-hi); }
+  .fb p { margin: .3rem 0 0; color: rgba(247,236,214,.72); }
+  .on-crema .fb { border-top-color: rgba(43,23,16,.14); }
+  .on-crema .fb h3 { color: var(--mattone); }
+  .on-crema .fb p { color: rgba(43,23,16,.7); }
+
+  /* ================= Consegna / verifica ================= */
+  .zone { background: var(--vino-lo); border: 1px solid var(--line-on-vino); border-radius: 1rem; padding: 1.1rem 1.3rem; }
+  .zone .label { display:block; margin-bottom: .3rem; }
+  .zone-v { font-family: 'Fredoka', sans-serif; font-size: 2.1rem; color: var(--senape-hi); font-weight: 600; }
+  .to-verify { background: rgba(232,162,61,.14); border: 1.5px dashed var(--senape-lo); border-radius: 1rem; padding: 1.1rem 1.3rem; display: flex; gap: .9rem; }
+  .to-verify .ic { color: var(--senape-hi); margin-top: .1rem; }
+  .on-crema .to-verify { background: rgba(122,44,31,.06); border-color: var(--mattone); }
+  .on-crema .to-verify .ic { color: var(--mattone); }
+
+  /* ================= Orari ================= */
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours td, .hours th { padding: .7rem 0; border-bottom: 1px solid rgba(43,23,16,.12); text-align: left; font-size: .98rem; }
+  .hours td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* ================= Contatti / plate ================= */
+  .plate { display: inline-flex; align-items: center; gap: .6rem; background: var(--crema-hi); color: var(--ink); border-radius: .7rem; padding: .8rem 1.1rem; font-weight: 800; box-shadow: 0 10px 26px rgba(0,0,0,.25); transform: rotate(-1.2deg); }
+  .plate small { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: .68rem; opacity: .6; }
+  .plate strong { font-family: 'Fredoka', sans-serif; font-size: 1.5rem; }
+
+  /* ================= CTA finale & footer ================= */
+  .final { position: relative; isolation: isolate; overflow: hidden; }
+  .final-media { position: absolute; inset: 0; z-index: -2; } .final-veil { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(42,10,8,.86), rgba(42,10,8,.94)); }
+  .mega-tel { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: clamp(2.4rem, 9vw, 4.2rem); color: var(--senape-hi); border-bottom: 4px solid var(--senape); padding-bottom: .1em; display: inline-block; }
+  .site-footer { background: var(--vino-lo); padding: 3rem 0 2.5rem; }
+  .site-footer h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: var(--senape-hi); margin-bottom: .8rem; }
+  .site-footer dl { display: grid; grid-template-columns: 1fr auto; gap: .45rem 1rem; font-size: .95rem; }
+  .site-footer dt { color: rgba(247,236,214,.65); } .site-footer dd { margin: 0; font-weight: 700; text-align: right; }
+  .foot-link { text-decoration: underline; text-underline-offset: .2em; text-decoration-color: rgba(247,236,214,.4); }
+  .foot-link:hover { text-decoration-color: var(--senape); }
+
+  /* ================= CTA mobile & torna su ================= */
+  .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: flex; gap: .6rem; padding: .6rem .8rem calc(.6rem + env(safe-area-inset-bottom,0px));
+             background: var(--vino-lo); border-top: 1px solid var(--line-on-vino); }
+  .callbar .btn { flex: 1; }
+  @media (min-width: 1024px) { .callbar { display: none; } }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); } @media (min-width: 1024px) { body { padding-bottom: 0; } }
+
+  .to-top { position: fixed; right: 1rem; bottom: calc(84px + env(safe-area-inset-bottom,0px)); z-index: 45; width: 46px; height: 46px; border-radius: 999px;
+            background: var(--senape); color: var(--ink); display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0,0,0,.3); transition: opacity .25s, transform .25s; }
+  .to-top.is-off { opacity: 0; visibility: hidden; transform: translateY(10px); pointer-events: none; }
+  @media (min-width: 1024px) { .to-top { bottom: 1.5rem; } }
+
+  /* ================= Utility rise (no-motion friendly reveal) ================= */
+  [data-aos] { }
+  @media (prefers-reduced-motion: reduce) { [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PizzaRestaurant",
+  "name": "Pizza Pazza",
+  "servesCuisine": "Pizza",
+  "telephone": "+39031699829",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Dante Alighieri, 12",
+    "addressLocality": "Lurago d'Erba",
+    "postalCode": "22040",
+    "addressRegion": "CO",
+    "addressCountry": "IT"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-swirl" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v5"/><path d="M17 6l-3 3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2C9.6 22 2 14.4 2 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M6 17l4-9h4l4 9M9 8h4M13 17h5l-3-6"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2Z"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><rect x="4" y="13" width="7" height="7" rx="1.2"/><rect x="13" y="13" width="7" height="7" rx="1.2"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.9 6.3.7-4.7 4.4 1.2 6.3L12 17.2 6.5 20.3l1.2-6.3L3 9.6l6.3-.7L12 3Z"/></symbol>
+</svg>
+
+<header class="site-header" id="site-header">
+  <div class="wrap hdr-row">
+    <a href="#top" class="logo" aria-label="Pizza Pazza, torna all'inizio della pagina">
+      <span class="logo-mark" aria-hidden="true"><svg class="ic"><use href="#i-swirl"/></svg></span>
+      <span>Pizza<span style="color:var(--senape-hi)">Pazza</span></span>
+    </a>
+    <nav class="lg-nav" aria-label="Principale">
+      <div class="flex items-center gap-1">
+        <a class="nav-link" href="#menu">Menu</a>
+        <a class="nav-link" href="#evidenza">Specialità</a>
+        <a class="nav-link" href="#consegna">Consegna</a>
+        <a class="nav-link" href="#orari">Orari</a>
+        <a class="nav-link" href="#contatti">Contatti</a>
+      </div>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a class="btn btn-primary lg-hide" href="tel:+39031699829" style="padding:.6rem 1rem"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="md-hide">Chiama</span></a>
+      <a class="btn btn-primary" href="tel:+39031699829" style="display:none" data-lg-call><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
+      <button class="burger lg-hide" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Apri la navigazione">
+        <span class="burger-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav-backdrop lg-hide" id="mnav-backdrop"></div>
+<nav class="mnav lg-hide" id="mnav" aria-label="Menu principale mobile">
+  <a href="#menu">Il menu</a>
+  <a href="#evidenza">Specialità</a>
+  <a href="#consegna">Consegna a domicilio</a>
+  <a href="#orari">Orari</a>
+  <a href="#recensioni">Cosa dicono di noi</a>
+  <a href="#contatti">Contatti</a>
+  <a class="btn btn-primary btn-lg mt-6 w-full" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
+</nav>
+
+<main id="main">
+<!-- ================================ HERO ================================ -->
+<section class="hero" id="top">
+  <div class="hero-media media" aria-hidden="true"><img data-img="hero" data-widths="800,1200,1700" alt="" loading="eager" fetchpriority="high"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap w-full pb-24 pt-28 md:pb-20">
+    <p class="badge" data-aos="fade-up"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>Asporto e domicilio</p>
+    <h1 class="hero-title mt-4" data-aos="fade-up" data-aos-delay="60">Pizza<br>Pazza</h1>
+    <p class="hero-tag mt-3" data-aos="fade-up" data-aos-delay="120">Pizza, panini e kebab a Lurago d'Erba.</p>
+    <p class="lead mt-4 !text-crema/80" data-aos="fade-up" data-aos-delay="160">Ogni pizza in due formati, classica o famiglia. Scegli dal menu e chiama: pensiamo noi al resto.</p>
+    <div class="mt-8 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="200">
+      <a class="btn btn-primary btn-lg" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama per ordinare</a>
+      <a class="btn btn-ghost btn-lg" href="#menu">Scopri il menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== INFO STRIP ============================== -->
+<section class="info-strip">
+  <div class="wrap">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-1">
+      <div class="info-item" data-aos="fade-up"><span class="info-ic" aria-hidden="true"><svg class="ic"><use href="#i-bag"/></svg></span><div><p class="font-bold text-crema-hi leading-tight">Asporto</p><p class="text-sm text-crema/60">Pronta da ritirare</p></div></div>
+      <div class="info-item" data-aos="fade-up" data-aos-delay="60"><span class="info-ic" aria-hidden="true"><svg class="ic"><use href="#i-bike"/></svg></span><div><p class="font-bold text-crema-hi leading-tight">Domicilio</p><p class="text-sm text-crema/60">€1,00 · min. 2 pizze</p></div></div>
+      <div class="info-item" data-aos="fade-up" data-aos-delay="120"><span class="info-ic" aria-hidden="true"><svg class="ic"><use href="#i-pin"/></svg></span><div><p class="font-bold text-crema-hi leading-tight">Classica o famiglia</p><p class="text-sm text-crema/60">Un prezzo per ogni misura</p></div></div>
+      <div class="info-item" data-aos="fade-up" data-aos-delay="180"><span class="info-ic" aria-hidden="true"><svg class="ic"><use href="#i-list"/></svg></span><div><p class="font-bold text-crema-hi leading-tight">Il menu</p><p class="text-sm text-crema/60"><a class="underline underline-offset-2" href="#menu">Sfoglialo qui sotto</a></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ CONCEPT ================================ -->
+<section class="swirl-bg py-20 md:py-28">
+  <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16 items-center">
+    <div class="lg:col-span-6" data-aos="fade-up">
+      <p class="label">Da Pizza Pazza</p>
+      <h2 class="h-sec mt-3">Il gusto di sempre, un po' pazzo</h2>
+      <p class="lead mt-5">Pizza Pazza è una pizzeria di Lurago d'Erba, in Via Dante Alighieri 12. In menu tante pizze classiche e originali, sempre in due formati: classica o famiglia. Ci sono anche calzoni, focacce, panini farciti e la linea kebab.</p>
+      <div class="mt-7 flex flex-wrap gap-2.5">
+        <span class="chip"><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg>68 pizze in menu</span>
+        <span class="chip"><svg class="ic" aria-hidden="true"><use href="#i-swirl"/></svg>Formato classica o famiglia</span>
+        <span class="chip"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg>Consegna a domicilio</span>
+      </div>
+    </div>
+    <div class="lg:col-span-6 grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="90">
+      <div class="media aspect-[4/5] rounded-2xl mt-8"><img data-img="concept-a" data-widths="500,700" alt="Pizza appena sfornata (immagine di repertorio)" loading="lazy" decoding="async"></div>
+      <div class="media aspect-[4/5] rounded-2xl"><img data-img="concept-b" data-widths="500,700" alt="Ingredienti freschi per la preparazione della pizza (immagine di repertorio)" loading="lazy" decoding="async"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ MENU ================================ -->
+<section id="menu" class="on-crema" aria-labelledby="menu-title">
+  <div class="wrap pt-16 md:pt-20 pb-10">
+    <div data-aos="fade-up">
+      <p class="label">Il menu completo</p>
+      <h2 id="menu-title" class="h-sec mt-3">Cosa trovi da Pizza Pazza</h2>
+      <p class="lead mt-4">Tutte le voci del menu, senza scaricare il PDF. Cerca per nome o ingrediente, oppure sfoglia le categorie.</p>
+    </div>
+    <div class="search-wrap mt-8" data-aos="fade-up">
+      <label class="sr-only" for="menu-search">Cerca una pizza o un ingrediente</label>
+      <div class="search">
+        <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="menu-search" type="search" placeholder="Cerca per nome o ingrediente..." autocomplete="off" enterkeyhint="search">
+        <button class="search-clear" id="menu-search-clear" hidden aria-label="Cancella la ricerca"><span aria-hidden="true"><svg class="ic" style="width:1rem;height:1rem"><use href="#i-x"/></svg></span></button>
+      </div>
+      <p class="sr-only" role="status" id="menu-search-status"></p>
+    </div>
+    <div class="supp-panel mt-6" data-aos="fade-up">
+      <p class="label" style="color:var(--senape-hi)">Personalizza la tua pizza</p>
+      <p class="mt-2 text-crema/85 text-sm">A ogni variazione o aggiunta: supplemento di €2,00 sulla pizza classica ed €2,00 sulla pizza famiglia.</p>
+      <dl>
+        <dt>Farina integrale</dt><dd>+€2,00</dd>
+        <dt>Farina di Kamut</dt><dd>+€2,00</dd>
+        <dt>Farina senza glutine</dt><dd>+€2,00</dd>
+        <dt>Mozzarella senza lattosio</dt><dd>+€2,00</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="cat-nav-wrap">
+    <div class="cat-nav" id="cat-nav" role="tablist" aria-label="Categorie del menu">
+      <button class="cat-pill is-active" data-pill="pizze" role="tab" aria-selected="true">Pizze <small>68</small></button>
+      <button class="cat-pill" data-pill="calzoni" role="tab" aria-selected="false">Calzoni <small>5</small></button>
+      <button class="cat-pill" data-pill="focacce" role="tab" aria-selected="false">Focacce <small>5</small></button>
+      <button class="cat-pill" data-pill="panini" role="tab" aria-selected="false">Panini <small>15</small></button>
+      <button class="cat-pill" data-pill="kebab" role="tab" aria-selected="false">Kebab <small>3</small></button>
+      <button class="cat-pill" data-pill="patatine" role="tab" aria-selected="false">Patatine <small>1</small></button>
+      <button class="cats-btn" id="cats-open" aria-haspopup="dialog"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>Categorie</button>
+    </div>
+  </div>
+
+  <div class="wrap py-10">
+    <div class="grid gap-4" id="menu-list">
+      <div class="menu-cat" id="cat-pizze" data-total="68">
+        <h3 class="sr-only">Le Nostre Pizze</h3>
+        <button class="cat-btn" id="catbtn-pizze" aria-expanded="true" aria-controls="catpanel-pizze" data-cat="pizze">
+          <span class="cat-num" aria-hidden="true">01</span>
+          <span class="cat-btn-title"><h3 style="font-family:'Fredoka',sans-serif;font-size:1.25rem">Le Nostre Pizze</h3><p class="cat-meta"><b data-count>68</b> pizze · classica da €4,00 a €10,00</p></span>
+          <span class="cat-chev" aria-hidden="true"><svg class="ic"><use href="#i-chev"/></svg></span>
+        </button>
+        <div class="cat-panel cols-2" id="catpanel-pizze" role="region" aria-labelledby="catbtn-pizze">
+          <ul class="menu-list">
+          <li class="pz-item"><span class="mi-name">Adamo Ed Eva</span><span class="mi-desc">Mozzarella, zola, mela</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Arrabbiata</span><span class="mi-desc">Pomodoro, mozzarella, acciughe, tabasco</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Bacon</span><span class="mi-desc">Pomodoro, mozzarella, pancetta, cipolla, uova</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.50">€8,50</data></span><span class="pz-p"><b>Famiglia</b><data value="25.50">€25,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Biancaneve</span><span class="mi-desc">Mozzarella</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="5.00">€5,00</data></span><span class="pz-p"><b>Famiglia</b><data value="15.00">€15,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Bismarck</span><span class="mi-desc">Pomodoro, mozzarella, prosciutto cotto, uova, grana</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Bomba</span><span class="mi-desc">Pomodoro, mozzarella, salsiccia, borlotti, peperoni, tabasco</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.50">€9,50</data></span><span class="pz-p"><b>Famiglia</b><data value="28.50">€28,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Boscaiola</span><span class="mi-desc">Pomodoro, mozzarella, salsiccia, funghi, olive, cipolle</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Braccio Di Ferro</span><span class="mi-desc">Pomodoro, mozzarella, spinaci, uova, grana</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Brianzola</span><span class="mi-desc">Pomodoro, mozzarella, salsiccia</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Bufalina</span><span class="mi-desc">Pomodoro, mozzarella di bufala, pomodorini, origano</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Capricciosa</span><span class="mi-desc">Pomodoro, mozzarella, prosciutto, capriccio di verdure</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Crudo</span><span class="mi-desc">Pomodoro, mozzarella, prosciutto crudo</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Crudo E Rucola</span><span class="mi-desc">Pomodoro, mozzarella, crudo, rucola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Debby</span><span class="mi-desc">Pomodoro, mozzarella, zola, salame piccante, acciughe, tabasco</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Dennis</span><span class="mi-desc">Mozzarella, cipolle, salsiccia, zola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.50">€8,50</data></span><span class="pz-p"><b>Famiglia</b><data value="25.50">€25,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Diavola</span><span class="mi-desc">Pomodoro, mozzarella, salame piccante</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Friarielli</span><span class="mi-desc">Pomodoro, mozzarella, salsiccia, friarielli</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.50">€9,50</data></span><span class="pz-p"><b>Famiglia</b><data value="28.50">€28,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Frutti Di Mare</span><span class="mi-desc">Pomodoro, mozzarella, frutti di mare</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Fumè</span><span class="mi-desc">Pomodoro, mozzarella, melanzane, grana</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Funghi</span><span class="mi-desc">Pomodoro, mozzarella, funghi misti</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Gorgonzola</span><span class="mi-desc">Pomodoro, mozzarella, zola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Italia</span><span class="mi-desc">Pomodoro, mozzarella, ricotta, spinaci</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Le Corti</span><span class="mi-desc">Pomodoro, mozzarella, cipolle, taleggio, crudo, grana</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Lolly</span><span class="mi-desc">Pomodoro, mozzarella, tonno, cipolla, taleggio, zucchine, pomodorini</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Marcus</span><span class="mi-desc">Pomodoro, mozzarella, salame piccante, uovo, taleggio</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Mare E Monti</span><span class="mi-desc">Pomodoro, mozzarella, salmone, funghi porcini</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Margherita</span><span class="mi-desc">Pomodoro, mozzarella</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="5.50">€5,50</data></span><span class="pz-p"><b>Famiglia</b><data value="16.50">€16,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Marinara</span><span class="mi-desc">Pomodoro, aglio, origano</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="4.00">€4,00</data></span><span class="pz-p"><b>Famiglia</b><data value="12.00">€12,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Messicana</span><span class="mi-desc">Pomodoro, mozzarella, borlotti, cipolle, tabasco</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Monzese</span><span class="mi-desc">Pomodoro, mozzarella, salsiccia, cipolle</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Morgan</span><span class="mi-desc">Pomodoro, mozzarella, porcini, taleggio, cipolle, grana, zucchine</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Napoletana</span><span class="mi-desc">Pomodoro, mozzarella, acciughe, origano</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="6.50">€6,50</data></span><span class="pz-p"><b>Famiglia</b><data value="19.50">€19,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Ortolano</span><span class="mi-desc">Pomodoro, mozzarella, melanzane, zucchine, spinaci, peperoni</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Paesana</span><span class="mi-desc">Pomodoro, mozzarella, funghi, cipolle, taleggio</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.50">€8,50</data></span><span class="pz-p"><b>Famiglia</b><data value="25.50">€25,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Pancetta</span><span class="mi-desc">Pomodoro, mozzarella, pancetta</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Patatine</span><span class="mi-desc">Pomodoro, mozzarella, patatine fritte</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Peperoni</span><span class="mi-desc">Pomodoro, mozzarella, peperoni</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Peppino</span><span class="mi-desc">Pomodoro, mozzarella, tonno, pesto, pinoli</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.50">€9,50</data></span><span class="pz-p"><b>Famiglia</b><data value="28.50">€28,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Pescatora</span><span class="mi-desc">Mozzarella di bufala, salmone, panna, rucola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Pinturicchio</span><span class="mi-desc">Mozzarella di bufala, scamorza, speck</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Pizza Pazza</span><span class="mi-desc">Pomodoro, mozzarella di bufala, porcini, pomodorini, rucola, grana</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Porcini</span><span class="mi-desc">Pomodoro, mozzarella, funghi porcini</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.50">€9,50</data></span><span class="pz-p"><b>Famiglia</b><data value="28.50">€28,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Prosciutto</span><span class="mi-desc">Pomodoro, mozzarella, prosciutto cotto</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Prosciutto E Funghi</span><span class="mi-desc">Pomodoro, mozzarella, cotto, funghi</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Prosciutto E Panna</span><span class="mi-desc">Pomodoro, mozzarella, cotto, panna</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Prosciutto E Wurstel</span><span class="mi-desc">Pomodoro, mozzarella, cotto, wurstel</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Pugliese</span><span class="mi-desc">Pomodoro, mozzarella, cipolle</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="6.50">€6,50</data></span><span class="pz-p"><b>Famiglia</b><data value="19.50">€19,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Quattro Formaggi</span><span class="mi-desc">Pomodoro, mozzarella, formaggi misti</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Quattro Stagioni</span><span class="mi-desc">Pomodoro, mozzarella, cotto, funghi, carciofi</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Roby</span><span class="mi-desc">Pomodoro, mozzarella, tonno, peperoni, zola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Radicchio</span><span class="mi-desc">Pomodoro, mozzarella, radicchio</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Romana</span><span class="mi-desc">Pomodoro, mozzarella, acciughe, capperi, olive, origano</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Rucola</span><span class="mi-desc">Pomodoro, mozzarella, rucola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Salmone</span><span class="mi-desc">Pomodoro, mozzarella, salmone</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.50">€9,50</data></span><span class="pz-p"><b>Famiglia</b><data value="28.50">€28,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Sara</span><span class="mi-desc">Pomodoro, mozzarella, gamberetti, salmone, rucola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Siciliana</span><span class="mi-desc">Pomodoro, capperi, acciughe, aglio</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Speck</span><span class="mi-desc">Pomodoro, mozzarella, speck</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Speck E Zola</span><span class="mi-desc">Pomodoro, mozzarella, speck, zola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.50">€8,50</data></span><span class="pz-p"><b>Famiglia</b><data value="25.50">€25,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Tedesca</span><span class="mi-desc">Pomodoro, mozzarella, wurstel, crauti</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Tirolese</span><span class="mi-desc">Pomodoro, mozzarella, speck, scamorza</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.50">€8,50</data></span><span class="pz-p"><b>Famiglia</b><data value="25.50">€25,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Tonno</span><span class="mi-desc">Pomodoro, mozzarella, tonno</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Tonno E Cipolle</span><span class="mi-desc">Pomodoro, mozzarella, tonno, cipolla</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.50">€7,50</data></span><span class="pz-p"><b>Famiglia</b><data value="22.50">€22,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Trevigiana</span><span class="mi-desc">Pomodoro, mozzarella, radicchio, taleggio</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Valtellinese</span><span class="mi-desc">Pomodoro, mozzarella, porcini, bresaola</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="10.00">€10,00</data></span><span class="pz-p"><b>Famiglia</b><data value="30.00">€30,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Viennese</span><span class="mi-desc">Pomodoro, mozzarella, bresaola, rucola, grana</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.50">€9,50</data></span><span class="pz-p"><b>Famiglia</b><data value="28.50">€28,50</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Wurstel</span><span class="mi-desc">Pomodoro, mozzarella, wurstel</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="7.00">€7,00</data></span><span class="pz-p"><b>Famiglia</b><data value="21.00">€21,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Zeus</span><span class="mi-desc">Pomodoro, mozzarella, scamorza, salame piccante, peperoni</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="9.00">€9,00</data></span><span class="pz-p"><b>Famiglia</b><data value="27.00">€27,00</data></span></span></li>
+          <li class="pz-item"><span class="mi-name">Pizza Kebab</span><span class="pz-prices"><span class="pz-p"><b>Classica</b><data value="8.00">€8,00</data></span><span class="pz-p"><b>Famiglia</b><data value="24.00">€24,00</data></span></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="cat-calzoni" data-total="5">
+        <h3 class="sr-only">Calzoni</h3>
+        <button class="cat-btn" id="catbtn-calzoni" aria-expanded="false" aria-controls="catpanel-calzoni" data-cat="calzoni">
+          <span class="cat-num" aria-hidden="true">02</span>
+          <span class="cat-btn-title"><h3 style="font-family:'Fredoka',sans-serif;font-size:1.25rem">Calzoni</h3><p class="cat-meta"><b data-count>5</b> calzoni · da €7,50 a €8,50</p></span>
+          <span class="cat-chev" aria-hidden="true"><svg class="ic"><use href="#i-chev"/></svg></span>
+        </button>
+        <div class="cat-panel" id="catpanel-calzoni" role="region" aria-labelledby="catbtn-calzoni">
+          <ul class="menu-list">
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Ai Quattro Formaggi</span><span class="mi-desc">Pomodoro, mozzarella, formaggi misti</span></div><data class="simple-price" value="8.00">€8,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Liscio</span><span class="mi-desc">Pomodoro, mozzarella, prosciutto cotto</span></div><data class="simple-price" value="7.50">€7,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Farcito</span><span class="mi-desc">Pomodoro, mozzarella, cotto, carciofi, funghi</span></div><data class="simple-price" value="8.00">€8,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Wurstel E Prosciutto</span><span class="mi-desc">Pomodoro, mozzarella, wurstel, prosciutto cotto</span></div><data class="simple-price" value="8.00">€8,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Bizzarro</span><span class="mi-desc">Pomodoro, mozzarella, taleggio, capperi, prosciutto cotto</span></div><data class="simple-price" value="8.50">€8,50</data></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="cat-focacce" data-total="5">
+        <h3 class="sr-only">Focacce</h3>
+        <button class="cat-btn" id="catbtn-focacce" aria-expanded="false" aria-controls="catpanel-focacce" data-cat="focacce">
+          <span class="cat-num" aria-hidden="true">03</span>
+          <span class="cat-btn-title"><h3 style="font-family:'Fredoka',sans-serif;font-size:1.25rem">Focacce</h3><p class="cat-meta"><b data-count>5</b> focacce · da €4,00 a €8,00</p></span>
+          <span class="cat-chev" aria-hidden="true"><svg class="ic"><use href="#i-chev"/></svg></span>
+        </button>
+        <div class="cat-panel" id="catpanel-focacce" role="region" aria-labelledby="catbtn-focacce">
+          <ul class="menu-list">
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Liscia</span><span class="mi-desc">Pasta doppia, olio, sale</span></div><data class="simple-price" value="4.00">€4,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Farcita</span><span class="mi-desc">Pasta doppia, olio, sale, mozzarella di bufala, crudo</span></div><data class="simple-price" value="8.00">€8,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Alle Verdure</span><span class="mi-desc">Olio, sale, origano, verdure grigliate</span></div><data class="simple-price" value="7.50">€7,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Al Prosciutto</span><span class="mi-desc">Pasta doppia, olio, sale, prosciutto cotto</span></div><data class="simple-price" value="6.00">€6,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Mediterranea</span><span class="mi-desc">Olio, sale, pomodorini, mozzarella di bufala, rucola</span></div><data class="simple-price" value="8.00">€8,00</data></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="cat-panini" data-total="15">
+        <h3 class="sr-only">I Nostri Panini</h3>
+        <button class="cat-btn" id="catbtn-panini" aria-expanded="false" aria-controls="catpanel-panini" data-cat="panini">
+          <span class="cat-num" aria-hidden="true">04</span>
+          <span class="cat-btn-title"><h3 style="font-family:'Fredoka',sans-serif;font-size:1.25rem">I Nostri Panini</h3><p class="cat-meta"><b data-count>15</b> panini · €6,50</p></span>
+          <span class="cat-chev" aria-hidden="true"><svg class="ic"><use href="#i-chev"/></svg></span>
+        </button>
+        <div class="cat-panel cols-2" id="catpanel-panini" role="region" aria-labelledby="catbtn-panini">
+          <ul class="menu-list">
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Caprese</span><span class="mi-desc">Mozzarella di bufala, pomodorini, olio, sale</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Contadino</span><span class="mi-desc">Speck, brie, rucola</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Diavoletto</span><span class="mi-desc">Mozzarella, salame piccante, taleggio</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Vanessa</span><span class="mi-desc">Mozzarella, salmone affumicato</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Melani</span><span class="mi-desc">Bresaola, mozzarella, rucola</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Leggero</span><span class="mi-desc">Crudo, mozzarella, pomodoro</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Marinaro</span><span class="mi-desc">Mozzarella, tonno, pomodoro, origano, sale</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Ortolano</span><span class="mi-desc">Mozzarella, melanzane, peperoni, zucchine, origano, sale</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Primo</span><span class="mi-desc">Cotto, brie, pomodorini</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Saporito</span><span class="mi-desc">Mozzarella, pancetta, pomodoro</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Semplice</span><span class="mi-desc">Prosciutto crudo, brie</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Tedesco</span><span class="mi-desc">Wurstel, crauti, senape</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Tirolese</span><span class="mi-desc">Speck, mozzarella, brie, patè di olive</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Varsavia</span><span class="mi-desc">Speck, gorgonzola, salsa rosè</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Panini Con Salumi E Mozzarella</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="cat-kebab" data-total="3">
+        <h3 class="sr-only">Kebab</h3>
+        <button class="cat-btn" id="catbtn-kebab" aria-expanded="false" aria-controls="catpanel-kebab" data-cat="kebab">
+          <span class="cat-num" aria-hidden="true">05</span>
+          <span class="cat-btn-title"><h3 style="font-family:'Fredoka',sans-serif;font-size:1.25rem">Kebab</h3><p class="cat-meta"><b data-count>3</b> kebab · da €6,00 a €6,50</p></span>
+          <span class="cat-chev" aria-hidden="true"><svg class="ic"><use href="#i-chev"/></svg></span>
+        </button>
+        <div class="cat-panel" id="catpanel-kebab" role="region" aria-labelledby="catbtn-kebab">
+          <ul class="menu-list">
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Panino Kebab</span></div><data class="simple-price" value="6.00">€6,00</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Piadina Kebab</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Vaschetta Kebab</span></div><data class="simple-price" value="6.50">€6,50</data></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="cat-patatine" data-total="1">
+        <h3 class="sr-only">Patatine</h3>
+        <button class="cat-btn" id="catbtn-patatine" aria-expanded="false" aria-controls="catpanel-patatine" data-cat="patatine">
+          <span class="cat-num" aria-hidden="true">06</span>
+          <span class="cat-btn-title"><h3 style="font-family:'Fredoka',sans-serif;font-size:1.25rem">Patatine</h3><p class="cat-meta"><b data-count>1</b> patatine · €3,00</p></span>
+          <span class="cat-chev" aria-hidden="true"><svg class="ic"><use href="#i-chev"/></svg></span>
+        </button>
+        <div class="cat-panel" id="catpanel-patatine" role="region" aria-labelledby="catbtn-patatine">
+          <ul class="menu-list">
+          <li class="simple-item"><div class="min-w-0"><span class="mi-name">Patatine</span></div><data class="simple-price" value="3.00">€3,00</data></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="empty-msg" id="menu-empty" hidden>Nessun piatto trovato. Prova con un altro nome o ingrediente.</p>
+  </div>
+</section>
+
+<div class="cats-sheet-backdrop" id="cats-backdrop"></div>
+<div class="cats-sheet" id="cats-sheet" role="dialog" aria-modal="true" aria-label="Vai a una categoria">
+  <div class="bar" aria-hidden="true"></div>
+  <h3 class="h-sub" style="color:var(--ink)">Vai a una categoria</h3>
+  <div class="mt-2" id="cats-sheet-list">
+    <button class="row" data-pill="pizze">Le Nostre Pizze <span>68 voci</span></button>
+    <button class="row" data-pill="calzoni">Calzoni <span>5 voci</span></button>
+    <button class="row" data-pill="focacce">Focacce <span>5 voci</span></button>
+    <button class="row" data-pill="panini">I Nostri Panini <span>15 voci</span></button>
+    <button class="row" data-pill="kebab">Kebab <span>3 voci</span></button>
+    <button class="row" data-pill="patatine">Patatine <span>1 voce</span></button>
+  </div>
+</div>
+
+<!-- ============================== IN EVIDENZA ============================== -->
+<section id="evidenza" class="py-20 md:py-28 swirl-bg" aria-labelledby="ev-title">
+  <div class="wrap">
+    <div data-aos="fade-up">
+      <p class="label">Una selezione dal menu</p>
+      <h2 id="ev-title" class="h-sec mt-3">Le specialità di Pizza Pazza</h2>
+    </div>
+
+    <article class="sig mt-9" data-aos="fade-up">
+      <div class="media aspect-[5/4] md:aspect-auto md:min-h-[26rem]">
+        <img data-img="signature" data-widths="600,900,1200" data-sizes="(min-width:900px) 50vw, 100vw" alt="Pizza appena sfornata (immagine di repertorio)" loading="lazy" decoding="async">
+      </div>
+      <div class="sig-body">
+        <p class="badge self-start"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>La pizza del locale</p>
+        <h3 class="sig-name">Pizza Pazza</h3>
+        <p class="max-w-md text-lg text-crema/80">Pomodoro, mozzarella di bufala, porcini, pomodorini, rucola, grana</p>
+        <div class="mt-1 flex flex-wrap items-end gap-x-8 gap-y-3">
+          <div class="pz-p" style="align-items:flex-start"><b style="color:rgba(247,236,214,.55)">Classica</b><data class="text-2xl" style="color:var(--crema-hi)" value="10.00">€10,00</data></div>
+          <div class="pz-p" style="align-items:flex-start"><b style="color:rgba(247,236,214,.55)">Famiglia</b><data class="text-2xl" style="color:var(--crema-hi)" value="30.00">€30,00</data></div>
+          <a class="btn btn-primary btn-lg" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiamare per ordinarla</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <article class="pick" data-aos="fade-up">
+        <h3>Valtellinese</h3><p>Pomodoro, mozzarella, porcini, bresaola</p>
+        <data value="10.00">Classica €10,00 · Famiglia €30,00</data>
+      </article>
+      <article class="pick" data-aos="fade-up" data-aos-delay="90">
+        <h3>Sara</h3><p>Pomodoro, mozzarella, gamberetti, salmone, rucola</p>
+        <data value="10.00">Classica €10,00 · Famiglia €30,00</data>
+      </article>
+      <article class="pick" data-aos="fade-up" data-aos-delay="180">
+        <h3>Bufalina</h3><p>Pomodoro, mozzarella di bufala, pomodorini, origano</p>
+        <data value="9.00">Classica €9,00 · Famiglia €27,00</data>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ CONSEGNA ================================ -->
+<section id="consegna" class="py-20 md:py-28" style="background:var(--vino-lo)" aria-labelledby="consegna-title">
+  <div class="wrap grid gap-12 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-5" data-aos="fade-up">
+      <p class="label">A domicilio</p>
+      <h2 id="consegna-title" class="h-sec mt-3">Pizza a casa tua</h2>
+      <p class="lead mt-5">Ordina per telefono: portiamo la pizza a casa tua. Il servizio prevede un ordine minimo e un piccolo contributo di consegna.</p>
+      <a class="btn btn-primary btn-lg mt-8" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama per ordinare</a>
+    </div>
+    <div class="lg:col-span-7">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="zone" data-aos="fade-up"><p class="label">Costo di consegna</p><data class="zone-v" value="1.00">€1,00</data></div>
+        <div class="zone" data-aos="fade-up" data-aos-delay="90"><p class="label">Ordine minimo</p><p class="zone-v" style="font-size:1.5rem">2 pizze</p></div>
+      </div>
+      <div class="to-verify mt-4" data-aos="fade-up">
+        <svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>
+        <div>
+          <h3 class="h-sub" style="color:var(--crema-hi);font-size:1.05rem">Zone e tempi di consegna</h3>
+          <p class="text-crema/75 text-sm mt-1">Il costo indicato è quello riportato nel menu del locale. Per la zona coperta, eventuali distanze massime e i tempi previsti, ti consigliamo di telefonare per una conferma diretta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================= ORARI ================================= -->
+<section id="orari" class="on-crema py-20 md:py-28" aria-labelledby="orari-title">
+  <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-5" data-aos="fade-up">
+      <p class="label">Quando siamo aperti</p>
+      <h2 id="orari-title" class="h-sec mt-3">Orari di apertura</h2>
+      <p class="lead mt-5" style="color:rgba(43,23,16,.72)">Gli orari qui sotto sono quelli riportati nelle directory online del locale.</p>
+      <a class="btn btn-primary btn-lg mt-6" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama per conferma</a>
+    </div>
+    <div class="lg:col-span-7" data-aos="fade-up" data-aos-delay="80">
+      <table class="hours">
+        <caption class="sr-only">Orari settimanali indicativi</caption>
+        <tbody>
+          <tr><th scope="row">Tutti i giorni</th><td><span class="nb">11:00–14:00</span> <span class="nb">18:00–22:00</span></td></tr>
+        </tbody>
+      </table>
+      <div class="to-verify mt-6">
+        <svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>
+        <div>
+          <h3 class="h-sub" style="font-size:1.05rem">Orario da confermare</h3>
+          <p class="text-sm mt-1" style="color:rgba(43,23,16,.7)">Questo orario non è ancora stato confermato direttamente dal titolare: prima della pubblicazione del sito va verificato ed eventualmente corretto qui sotto, in un unico punto del codice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== RECENSIONI ============================== -->
+<!-- Sintesi editoriale prudente: nessun punteggio, nome o citazione inventati.
+     Se in futuro sarà disponibile il link diretto alla scheda Google del locale, inserirlo al posto del commento qui sotto. -->
+<!-- PUNTO DI INSERIMENTO: link alla scheda Google (Maps/Business) di Pizza Pazza, quando disponibile -->
+<section id="recensioni" class="py-20 md:py-28" style="background:var(--vino-lo)" aria-labelledby="rec-title">
+  <div class="wrap grid gap-10 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-5" data-aos="fade-up">
+      <p class="label">Fiducia dei clienti</p>
+      <h2 id="rec-title" class="h-sec mt-3">Cosa dicono di Pizza Pazza</h2>
+      <p class="lead mt-5">Le valutazioni online variano da una piattaforma all'altra. Qui una sintesi prudente dei temi che ricorrono più spesso, senza citazioni né punteggi.</p>
+    </div>
+    <div class="grid gap-x-12 md:grid-cols-2 lg:col-span-7" data-aos="fade-up" data-aos-delay="80">
+      <div class="fb"><h3>Il menu</h3><p>Una scelta molto ampia, con la possibilità di avere ogni pizza in formato famiglia.</p></div>
+      <div class="fb"><h3>Kebab e panini</h3><p>Apprezzata anche la linea kebab e panini, oltre alla pizza.</p></div>
+      <div class="fb"><h3>Asporto</h3><p>Un punto di riferimento per chi cerca la pizza da asporto in zona.</p></div>
+      <div class="fb"><h3>Da verificare</h3><p>Come per ogni fonte online, conviene verificare orari e tempi di attesa telefonando prima di uscire.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DOVE TROVARCI ============================== -->
+<section id="contatti" class="on-crema py-20 md:py-28" aria-labelledby="contatti-title">
+  <div class="wrap grid gap-14 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-6" data-aos="fade-up">
+      <p class="label">Dove trovarci</p>
+      <h2 id="contatti-title" class="h-sec mt-3">Contatti</h2>
+      <p class="mt-8"><span class="plate"><small>Via Dante Alighieri</small><strong>12</strong></span></p>
+      <address class="mt-8 text-lg leading-relaxed" style="font-style:normal">
+        <strong>Pizza Pazza</strong><br>Via Dante Alighieri, 12<br>22040 Lurago d'Erba (CO)
+      </address>
+      <p class="mt-3 text-lg"><a class="foot-link" style="color:var(--mattone)" href="tel:+39031699829">031 699829</a></p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a class="btn btn-primary btn-lg" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
+        <a class="btn btn-ghost btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=Pizza+Pazza+Via+Dante+Alighieri+12+Lurago+d%27Erba+CO" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-nav"/></svg>Apri in Maps<span class="sr-only"> (si apre in una nuova scheda)</span></a>
+      </div>
+    </div>
+    <div class="lg:col-span-6" data-aos="fade-up" data-aos-delay="80">
+      <h3 class="h-sub" style="font-size:1.2rem">Come si ordina</h3>
+      <ol class="mt-5" style="list-style:none;padding:0">
+        <li style="display:grid;grid-template-columns:2.4rem 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid rgba(43,23,16,.14)"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.7rem;color:var(--mattone)">1</span><div><strong class="block">Scegli dal menu</strong><span class="text-sm" style="color:rgba(43,23,16,.65)">Sfoglia le categorie o usa la ricerca.</span></div></li>
+        <li style="display:grid;grid-template-columns:2.4rem 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid rgba(43,23,16,.14)"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.7rem;color:var(--mattone)">2</span><div><strong class="block">Chiama lo 031 699829</strong><span class="text-sm" style="color:rgba(43,23,16,.65)">Indica formato ed eventuali variazioni.</span></div></li>
+        <li style="display:grid;grid-template-columns:2.4rem 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid rgba(43,23,16,.14);border-bottom:1px solid rgba(43,23,16,.14)"><span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.7rem;color:var(--mattone)">3</span><div><strong class="block">Ritira o fatti consegnare</strong><span class="text-sm" style="color:rgba(43,23,16,.65)">In Via Dante Alighieri 12, oppure a domicilio.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ CTA FINALE ================================ -->
+<section class="final py-24 md:py-36" aria-labelledby="final-title">
+  <div class="final-media media" aria-hidden="true"><img data-img="finale" data-widths="800,1400,2000" alt="" loading="lazy" decoding="async"></div>
+  <div class="final-veil" aria-hidden="true"></div>
+  <div class="wrap" data-aos="fade-up">
+    <h2 id="final-title" class="h-sec max-w-3xl">Fame di pizza?</h2>
+    <p class="mt-8"><a class="mega-tel" href="tel:+39031699829">031 699829</a></p>
+    <p class="lead mt-6 !text-crema/80">Via Dante Alighieri 12, Lurago d'Erba. Chiama per ordinare o per confermare l'orario di oggi.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a class="btn btn-primary btn-lg" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
+      <a class="btn btn-ghost btn-lg" href="#menu">Torna al menu</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================= FOOTER ================================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid gap-10 md:grid-cols-3 md:gap-12">
+      <div>
+        <a href="#top" class="logo" aria-label="Pizza Pazza, torna all'inizio della pagina">
+          <span class="logo-mark" aria-hidden="true"><svg class="ic"><use href="#i-swirl"/></svg></span>
+          <span>Pizza<span style="color:var(--senape-hi)">Pazza</span></span>
+        </a>
+        <address class="mt-5 leading-relaxed text-crema/80" style="font-style:normal">Via Dante Alighieri, 12<br>22040 Lurago d'Erba (CO)</address>
+        <p class="mt-2"><a class="foot-link" href="tel:+39031699829">031 699829</a></p>
+      </div>
+      <div>
+        <h2>Orari <span class="font-normal normal-case" style="color:rgba(247,236,214,.5)">(da confermare)</span></h2>
+        <dl><div><dt>Tutti i giorni</dt><dd><span class="nb">11:00–14:00</span> <span class="nb">18:00–22:00</span></dd></div></dl>
+      </div>
+      <div>
+        <h2>Consegna a domicilio</h2>
+        <dl><div><dt>Contributo</dt><dd>€1,00</dd></div><div><dt>Ordine minimo</dt><dd>2 pizze</dd></div></dl>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-sm text-crema/55">
+      <p>© <span data-year>2026</span> Pizza Pazza · Lurago d'Erba</p>
+      <nav aria-label="Link del footer" class="flex flex-wrap gap-x-4">
+        <a class="foot-link" href="#menu">Menu</a>
+        <a class="foot-link" href="#orari">Orari</a>
+        <a class="foot-link" href="#contatti">Contatti</a>
+        <a class="foot-link" href="tel:+39031699829">Chiama</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top is-off" id="to-top" href="#top" aria-label="Torna su"><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg></a>
+
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+39031699829"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a>
+  <a class="btn btn-ghost" href="#" id="callbar-menu"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>Categorie</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ===================== 1. Immagini di repertorio ===================== */
+  const IMAGES = {
+    'hero':      ['photo-1513104890138-7c749659a591', 'photo-1565299624946-b28f40a0ae38'],
+    'concept-a': ['photo-1590947132387-155cc02f3212', 'photo-1571407970349-bc81e7e96d47'],
+    'concept-b': ['photo-1574071318508-1cdbab80d002', 'photo-1604382354936-07c5d9983bd3'],
+    'signature': ['photo-1595854341625-f33ee10dbf94', 'photo-1513104890138-7c749659a591'],
+    'finale':    ['photo-1552539618-7eec9b4d1796', 'photo-1565299624946-b28f40a0ae38']
+  };
+  const isStock = (s) => /^photo-/.test(s);
+  const stockUrl = (id, w) => `https://images.unsplash.com/${id}?auto=format&fit=crop&q=70&w=${w}`;
+  function loadImage(img) {
+    const list = IMAGES[img.dataset.img] || [];
+    const widths = (img.dataset.widths || '900').split(',').map(Number);
+    let i = 0;
+    img.addEventListener('load', () => img.classList.add('is-loaded'));
+    const next = () => {
+      if (i >= list.length) { img.closest('.media')?.classList.add('is-broken'); return; }
+      const src = list[i++];
+      if (isStock(src)) {
+        img.srcset = widths.map((w) => `${stockUrl(src, w)} ${w}w`).join(', ');
+        img.sizes = img.dataset.sizes || '100vw';
+        img.src = stockUrl(src, widths[Math.floor(widths.length / 2)]);
+      } else { img.removeAttribute('srcset'); img.src = src; }
+    };
+    img.addEventListener('error', next);
+    next();
+  }
+  $$('img[data-img]').forEach(loadImage);
+
+  /* ===================== 2. Header, nav mobile ===================== */
+  const header = $('#site-header'), burger = $('#burger'), mnav = $('#mnav'), backdrop = $('#mnav-backdrop');
+  let menuOpen = false, headerHidden = false, pinned = false, pinTimer = 0, lastY = window.scrollY, showTop = false;
+
+  function setMenu(open) {
+    menuOpen = open;
+    mnav.classList.toggle('is-open', open); backdrop.classList.toggle('is-open', open); header.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Chiudi la navigazione' : 'Apri la navigazione');
+    if (open) hideHeader(false);
+  }
+  function hideHeader(hidden) {
+    if (hidden === headerHidden) return;
+    headerHidden = hidden; header.classList.toggle('is-hidden', hidden);
+    document.documentElement.style.setProperty('--sticky-top', hidden ? 'env(safe-area-inset-top, 0px)' : 'calc(var(--hdr) + env(safe-area-inset-top, 0px))');
+  }
+  burger.addEventListener('click', () => setMenu(!menuOpen));
+  backdrop.addEventListener('click', () => setMenu(false));
+  $$('a', mnav).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen) { setMenu(false); burger.focus(); } });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 1024 && menuOpen) setMenu(false); });
+  header.addEventListener('focusin', () => hideHeader(false));
+
+  const toTop = $('#to-top');
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      const y = Math.max(window.scrollY, 0);
+      header.classList.toggle('is-solid', y > 24);
+      const dy = y - lastY;
+      if (pinned) { clearTimeout(pinTimer); pinTimer = setTimeout(() => { pinned = false; }, 200); }
+      else if (!menuOpen) { if (y > 240 && dy > 6) hideHeader(true); else if (dy < -6 || y <= 240) hideHeader(false); }
+      lastY = y;
+      if (y < 900) showTop = false; else if (dy < -6) showTop = true; else if (dy > 6) showTop = false;
+      toTop.classList.toggle('is-off', !showTop);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll); onScroll();
+
+  /* ===================== 3. Fisarmonica categorie ===================== */
+  const cats = $$('.menu-cat');
+  const catBtns = new Map(cats.map((c) => [c.dataset ? c.id.replace('cat-', '') : '', $('.cat-btn', c)]));
+  function catId(c) { return c.id.replace('cat-', ''); }
+  function panelOf(c) { return $('.cat-panel', c); }
+  function btnOf(c) { return $('.cat-btn', c); }
+
+  function setOpen(cat, open, { exclusive = false } = {}) {
+    const btn = btnOf(cat), panel = panelOf(cat);
+    btn.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    if (open && exclusive) cats.forEach((c) => { if (c !== cat) setOpen(c, false); });
+  }
+  function defaultState() { cats.forEach((c, i) => setOpen(c, i === 0)); }
+  defaultState(); // stato iniziale via JS; senza JS tutti i pannelli restano visibili
+
+  cats.forEach((cat) => {
+    btnOf(cat).addEventListener('click', () => {
+      const open = btnOf(cat).getAttribute('aria-expanded') === 'true';
+      if (open) setOpen(cat, false);
+      else openAndScroll(catId(cat)); // apre, chiude le altre e riporta il titolo in vista (evita salti di pagina)
+    });
+  });
+
+  function openAndScroll(id, { exclusive = true } = {}) {
+    const cat = document.getElementById('cat-' + id);
+    if (!cat) return;
+    setOpen(cat, true, { exclusive });
+    hideHeader(true); pinned = true; clearTimeout(pinTimer); pinTimer = setTimeout(() => { pinned = false; }, 1400);
+    requestAnimationFrame(() => {
+      const navH = $('.cat-nav-wrap').offsetHeight; // header nascosto: la barra sale a top 0
+      const y = cat.getBoundingClientRect().top + window.scrollY - navH - 14;
+      window.scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
+    });
+    history.replaceState(null, '', '#' + id);
+    setActivePill(id);
+  }
+
+  /* ===================== 4. Nav categorie (pill) + scroll-spy ===================== */
+  const pills = new Map($$('.cat-pill').map((p) => [p.dataset.pill, p]));
+  const scroller = $('#cat-nav');
+  function setActivePill(id) {
+    pills.forEach((p, key) => { const on = key === id; p.classList.toggle('is-active', on); p.setAttribute('aria-selected', String(on)); });
+    const p = pills.get(id);
+    if (p && scroller) scroller.scrollTo({ left: p.offsetLeft - (scroller.clientWidth - p.offsetWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
+  }
+  pills.forEach((btn, id) => btn.addEventListener('click', () => openAndScroll(id)));
+
+  /* ===================== 5. Pannello "Categorie" (mobile sheet) ===================== */
+  const catsBackdrop = $('#cats-backdrop'), catsSheet = $('#cats-sheet'), catsOpenBtn = $('#cats-open'), callbarMenu = $('#callbar-menu');
+  let catsOpen = false, lastFocus = null;
+  function setCatsSheet(open) {
+    catsOpen = open;
+    catsBackdrop.classList.toggle('is-open', open); catsSheet.classList.toggle('is-open', open);
+    if (open) { lastFocus = document.activeElement; $('.row', catsSheet)?.focus(); }
+    else if (lastFocus) lastFocus.focus();
+  }
+  catsOpenBtn.addEventListener('click', () => setCatsSheet(true));
+  callbarMenu.addEventListener('click', (e) => { e.preventDefault(); setCatsSheet(true); });
+  catsBackdrop.addEventListener('click', () => setCatsSheet(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && catsOpen) setCatsSheet(false); });
+  $$('.row', catsSheet).forEach((btn) => btn.addEventListener('click', () => { setCatsSheet(false); openAndScroll(btn.dataset.pill); }));
+
+  /* ===================== 6. Ricerca live (tutte le categorie) ===================== */
+  const input = $('#menu-search'), clearBtn = $('#menu-search-clear'), emptyMsg = $('#menu-empty'), srStatus = $('#menu-search-status');
+  const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const items = $$('.pz-item, .simple-item').map((li) => ({
+    li, cat: li.closest('.menu-cat'),
+    text: norm((($('.mi-name', li) || {}).textContent || '') + ' ' + (($('.mi-desc', li) || {}).textContent || ''))
+  }));
+  let searching = false;
+  function filterMenu() {
+    const q = input.value.trim();
+    const tokens = norm(q).split(/\s+/).filter(Boolean);
+    searching = tokens.length > 0;
+    const perCat = new Map(); let total = 0;
+    items.forEach((it) => {
+      const ok = tokens.every((t) => it.text.includes(t));
+      it.li.hidden = !ok;
+      if (ok) { total++; perCat.set(it.cat, (perCat.get(it.cat) || 0) + 1); }
+    });
+    cats.forEach((c) => {
+      const n = perCat.get(c) || 0; const all = Number(c.dataset.total);
+      const b = $('[data-count]', c); if (b) b.textContent = tokens.length ? `${n}/${all}` : String(all);
+      const p = pills.get(catId(c)); if (p) p.hidden = searching && n === 0;
+      if (searching) { c.hidden = n === 0; if (n > 0) setOpen(c, true); }
+      else { c.hidden = false; }
+    });
+    if (!searching) defaultState();
+    emptyMsg.hidden = !(searching && total === 0);
+    clearBtn.hidden = !input.value;
+    srStatus.textContent = searching ? (total ? `${total} risultati` : 'Nessun risultato') : '';
+  }
+  input.addEventListener('input', filterMenu);
+  input.addEventListener('keydown', (e) => { if (e.key === 'Escape' && input.value) { input.value = ''; filterMenu(); } });
+  clearBtn.addEventListener('click', () => { input.value = ''; filterMenu(); input.focus(); });
+
+  /* ===================== 7. Varie ===================== */
+  if (window.AOS && !reduced) AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 60 });
+  else $$('[data-aos]').forEach((el) => el.removeAttribute('data-aos'));
+  $$('[data-year]').forEach((el) => { el.textContent = String(new Date().getFullYear()); });
+})();
+</script>
+</body>
+</html>
